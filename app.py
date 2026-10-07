@@ -13,14 +13,15 @@ view_mode = st.sidebar.selectbox("View Mode", ["Wireframe", "Solid Shaded", "Blu
 
 # Placeholder 3D geometric wireframe (representing your design model)
 # You can later swap this out to load an actual .STL or .OBJ file path
-fig = go.Figure(data=[go.Mesh3d(
-    x=[0, 1, 1, 0, 0, 1, 1, 0],
-    y=[0, 0, 1, 1, 0, 0, 1, 1],
-    z=[0, 0, 0, 0, 1, 1, 1, 1],
-    color='cyan',
-    opacity=0.5,
-    transparent=True
+fig = go.Figure(data=[go.Scatter3d(
+    x=[0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
+    y=[0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0],
+    z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0],
+    mode='lines',
+    line=dict(color='cyan', width=4),
+    opacity=0.8
 )])
+
 
 fig.update_layout(
     scene=dict(
