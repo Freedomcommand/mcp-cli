@@ -1,9 +1,9 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-st.set_page_config(page_title="Freedom's Bolt - 3D Blueprint View", layout="wide")
+st.set_page_config(page_title="3D Project Blueprint System", layout="wide")
 
-st.title("Freedom's Bolt: 3D Projectile & Blueprint System")
+st.title("3D Project Blueprint System")
 st.write("Inspect, rotate, and review design dimensions in real-time.")
 
 # Sidebar controls for manipulation
@@ -16,14 +16,12 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("AI Prompt / Design Input")
 user_input = st.sidebar.text_input("Type instructions or parameter changes:", placeholder="e.g., expand width to 2")
 
-# Placeholder 3D geometric wireframe box
+# Empty 3D plot (placeholder box removed)
 fig = go.Figure(data=[go.Scatter3d(
-    x=[0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-    y=[0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0],
-    z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0],
-    mode='lines',
-    line=dict(color='cyan', width=4),
-    opacity=0.8
+    x=[],
+    y=[],
+    z=[],
+    mode='lines'
 )])
 
 fig.update_layout(
